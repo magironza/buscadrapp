@@ -22,10 +22,44 @@
             
             <phone:PivotItem
             Header="General">
-                
-                <Grid>
-                    
-                </Grid>
+
+                <StackPanel x:Name="CategoriaMedGeral" Margin="12,17,0,28" 
+                            DataContext="{Binding Source= {StaticResource dataModel}}"  
+                            >
+                   
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Hidden">
+                        <phone:LongListSelector
+                x:Name="listamedgen"
+                ItemsSource="{Binding Data}" Canvas.Top="30">
+
+
+                            <phone:LongListSelector.ItemTemplate>
+
+
+                                <DataTemplate>
+
+                                    <StackPanel Margin="0,0,0,10">
+                                        <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Direccion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Telefono}" />
+                                        <TextBlock Text="{Binding Tarifa}" />
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </phone:LongListSelector.ItemTemplate>
+
+
+
+                        </phone:LongListSelector>
+
+                    </ScrollViewer>
+
+                </StackPanel>
 
             </phone:PivotItem>
 
@@ -34,12 +68,92 @@
             <phone:PivotItem
             Header="Especialista">
 
+                <StackPanel x:Name="Categoriaespecialis" Margin="12,17,0,28" 
+                            DataContext="{Binding Source= {StaticResource dataModel}}"  
+                            >
+
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Hidden">
+                        <phone:LongListSelector
+                x:Name="listespec"
+                ItemsSource="{Binding Data}" Canvas.Top="30">
+
+
+                            <phone:LongListSelector.ItemTemplate>
+
+
+                                <DataTemplate>
+
+                                    <StackPanel Margin="0,0,0,10">
+                                        <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Direccion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Telefono}" />
+                                        <TextBlock Text="{Binding Tarifa}" />
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </phone:LongListSelector.ItemTemplate>
+
+
+
+                        </phone:LongListSelector>
+
+                    </ScrollViewer>
+
+                </StackPanel>
+
+
+
+
             </phone:PivotItem>
 
 
 
             <phone:PivotItem
             Header="Dentista">
+
+                <StackPanel x:Name="CategoriaDentista" Margin="12,17,0,28" 
+                            DataContext="{Binding Source= {StaticResource dataModel}}"  
+                            >
+
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Hidden">
+                        <phone:LongListSelector
+                x:Name="listadentis"
+                ItemsSource="{Binding Data}" Canvas.Top="30">
+
+
+                            <phone:LongListSelector.ItemTemplate>
+
+
+                                <DataTemplate>
+
+                                    <StackPanel Margin="0,0,0,10">
+                                        <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Direccion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Telefono}" />
+                                        <TextBlock Text="{Binding Tarifa}" />
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </phone:LongListSelector.ItemTemplate>
+
+
+
+                        </phone:LongListSelector>
+
+                    </ScrollViewer>
+
+                </StackPanel>
+
 
             </phone:PivotItem>
 
@@ -48,6 +162,45 @@
 
             <phone:PivotItem
             Header="Mas">
+
+
+                <StackPanel x:Name="CategoriaMas" Margin="12,17,0,28" 
+                            DataContext="{Binding Source= {StaticResource dataModel}}"  
+                            >
+
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Hidden">
+                        <phone:LongListSelector
+                x:Name="listamas"
+                ItemsSource="{Binding Data}" Canvas.Top="30">
+
+
+                            <phone:LongListSelector.ItemTemplate>
+
+
+                                <DataTemplate>
+
+                                    <StackPanel Margin="0,0,0,10">
+                                        <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Direccion}" FontSize="24"/>
+                                        <TextBlock Text="{Binding Telefono}" />
+                                        <TextBlock Text="{Binding Tarifa}" />
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </phone:LongListSelector.ItemTemplate>
+
+
+
+                        </phone:LongListSelector>
+
+                    </ScrollViewer>
+
+                </StackPanel>
 
             </phone:PivotItem>
 

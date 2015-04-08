@@ -30,7 +30,7 @@
 
 
         </StackPanel>
-        <ScrollViewer Grid.Row="1" >
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto">
 
 
             <StackPanel x:Name="Filtrado" Height="528" Width="480">

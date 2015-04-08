@@ -15,47 +15,61 @@
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="BuscaDr" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
-
-        <!--ContentPanel. Colocar aquí el contenido adicional-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
 
 
-            <phone:LongListSelector
-                x:Name="list"
-                ItemsSource="{Binding Data}" Canvas.Top="30">
+        <phone:Panorama Title="Medico">
 
-                <phone:LongListSelector.ItemTemplate>
-                    <DataTemplate>
-                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
-                            <StackPanel Margin="0,0,0,10">
-                                <TextBlock Text="{Binding Institucion}" FontSize="24"/>
-                                <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
-                                <TextBlock Text="{Binding Medico}" FontSize="24"/>
-                                <TextBlock Text="{Binding Direccion}" FontSize="24"/>
-                                <TextBlock Text="{Binding Telefono}" />
-                                <TextBlock Text="{Binding Tarifa}" />
 
-                            </StackPanel>
-                        </ScrollViewer>
-                    </DataTemplate>
-                </phone:LongListSelector.ItemTemplate>
+            <phone:PanoramaItem Header="Descripcion">
+
+
+                <ScrollViewer HorizontalScrollBarVisibility="Auto">
+
+                    <phone:LongListSelector
+                x:Name="medicofind"
+                ItemsSource="{Binding Data}" Canvas.Top="30"
+                      DataContext="{Binding Source= {StaticResource dataModel}}"
+                    >
+
+                        <phone:LongListSelector.ItemTemplate>
+                            <DataTemplate>
+
+                                <StackPanel x:Name="Busca" Margin="12,17,0,28" 
+                           >
+                                    <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                    <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                    <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                    <TextBlock Text="{Binding Direccion}" FontSize="24"/>
+                                    <TextBlock Text="{Binding Telefono}" />
+                                    <TextBlock Text="{Binding Tarifa}" />
+
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </phone:LongListSelector.ItemTemplate>
 
 
 
-            </phone:LongListSelector>
+                    </phone:LongListSelector>
+                </ScrollViewer>
+            </phone:PanoramaItem>
+         
 
 
-        </Grid>
+            <phone:PanoramaItem Header="Ubicación">
+                
+                
+            </phone:PanoramaItem>
+            
+            <phone:PanoramaItem Header="Calificar">
+                
+                
+                
+            </phone:PanoramaItem>
+            
+
+        </phone:Panorama>
     </Grid>
+   
 
 </phone:PhoneApplicationPage>

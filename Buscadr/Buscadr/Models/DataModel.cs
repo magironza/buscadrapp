@@ -9,13 +9,13 @@ namespace Buscadr.Models
 {
     public class DataModel
     {
-        private ObservableCollection<Comentario> data;
-        public ObservableCollection<Comentario> Data
+        private ObservableCollection<Busca> data;
+        public ObservableCollection<Busca> Data
         {
             get
             {
                 if (data == null)
-                    data = new ObservableCollection<Comentario>();
+                    data = new ObservableCollection<Busca>();
 
                     return data;
             }

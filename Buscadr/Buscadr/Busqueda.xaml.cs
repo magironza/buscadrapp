@@ -13,19 +13,20 @@ using Buscadr.Models;
 
 namespace Buscadr
 {
-    public partial class Busqueda : PhoneApplicationPage, Mongo<Comentario>.Imongo
+    public partial class Busqueda : PhoneApplicationPage, Mongo<Busca>.Imongo
     {
-        Mongo<Comentario> mongo;
+        Mongo<Busca> mongo;
 
         public Busqueda()
         {
 
             InitializeComponent();
-            mongo = new Mongo<Comentario>("ppZxpAloVZB2iYVatT1rEz_6_bXUf0RJ", "listadrpop" , "drpopayan");
+          
+            mongo = new Mongo<Busca>("ppZxpAloVZB2iYVatT1rEz_6_bXUf0RJ", "listadrpop" , "drpopayan");
             mongo.findAllDocuments(this);
         }
 
-        public void loadDocuments(List<Comentario> documents)
+        public void loadDocuments(List<Busca> documents)
         {
             DataModel dataM = Application.Current.Resources["dataModel"] as DataModel;
 

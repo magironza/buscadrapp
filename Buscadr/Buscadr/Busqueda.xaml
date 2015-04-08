@@ -19,33 +19,40 @@
 
 
         <!--<phone:Pivot
-            Title="Busqueda" Background="Transparent">
+            Title="Busqueda" Background="Transparent">-->
 
 
 
-            <phone:PivotItem
-            Header="Medicos">-->
+            <!--<phone:PivotItem
+            Header="Medicos" >-->
 
-                <StackPanel x:Name="Busca" Margin="12,17,0,28"  
-                            DataContext="{Binding Source= {StaticResource dataModel}}">
-                    <Canvas>
-                        <TextBox x:Name="buscar" Text="¿Que deseas Buscar?" Foreground="Gray" Width="450" Canvas.ZIndex="2"/>
-                        <Rectangle Height="30" Width="30" Canvas.Left="404" 
+                <StackPanel x:Name="Busca" Margin="12,17,0,28"  Height="Auto"
+                            DataContext="{Binding Source= {StaticResource dataModel}}"  
+                            >
+            <Canvas>
+                <TextBox x:Name="buscar" Text="¿Que deseas Buscar?" Foreground="Gray" Width="450" Canvas.ZIndex="2"/>
+                <Rectangle Height="30" Width="30" Canvas.Left="404" 
                            Canvas.Top="20" Canvas.ZIndex="10">
-                            <Rectangle.Fill>
-                                <ImageBrush ImageSource="sea.png"/>
-                            </Rectangle.Fill>
-                        </Rectangle>
-                    </Canvas>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="sea.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
 
-                    <phone:LongListSelector
+            </Canvas>
+
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" Padding="5" >
+                <StackPanel>   
+                <phone:LongListSelector
                 x:Name="lista"
                 ItemsSource="{Binding Data}" Canvas.Top="30">
 
+
                         <phone:LongListSelector.ItemTemplate>
+
+
                             <DataTemplate>
 
-                                <StackPanel Margin="0,0,0,10">
+                                <StackPanel Margin="0,0,0,10" >
                                     <TextBlock Text="{Binding Institucion}" FontSize="24"/>
                                     <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
                                     <TextBlock Text="{Binding Medico}" FontSize="24"/>
@@ -54,16 +61,18 @@
                                     <TextBlock Text="{Binding Tarifa}" />
 
                                 </StackPanel>
+
                             </DataTemplate>
+
                         </phone:LongListSelector.ItemTemplate>
 
 
 
                     </phone:LongListSelector>
-
-
-
                 </StackPanel>
+            </ScrollViewer>
+        
+        </StackPanel>
 
 
 
@@ -78,11 +87,11 @@
 
 
             <phone:PivotItem
-            Header="Avanzada">-->
+            Header="Avanzada">
 
 
 
-                <!--<ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto">
 
                 <StackPanel x:Name="Filtrado" Margin="10,5,10,5">
 
@@ -128,12 +137,12 @@
 
                 </ScrollViewer>
 
-            </phone:PivotItem>-->
+            </phone:PivotItem>
 
 
 
 
-        <!--</phone:Pivot>-->
+        </phone:Pivot>-->
         </Grid>
 
 </phone:PhoneApplicationPage>
