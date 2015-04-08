@@ -119,31 +119,11 @@
                 </Canvas>
             </StackPanel>
 
-            <phone:LongListSelector x:Name="longlistselector"
-                                    Background="Transparent"
-                                    IsGroupingEnabled="True"                        
-                                    LayoutMode="List"
-                                    ItemsSource="{Binding Data}"
-                                    
-                                    >
+          
 
-                <phone:LongListSelector.ItemTemplate>
+               
 
-                    <DataTemplate>
-                        <StackPanel x:Name="datos" Margin="10,5,10,20">
-                            <TextBlock Text="{Binding Institucion}" FontSize="28"/>
-                            <TextBlock Text="{Binding Especialidad}" FontSize="28"/>
-                            <TextBlock Text="{Binding Medico}" FontSize="28"/>
-                            <TextBlock Text="{Binding Direccion}" FontSize="28"/>
-                            <TextBlock Text="{Binding Telefono}" FontSize="28"/>
-                            <TextBlock Text="{Binding Tarifa}" FontSize="28"/>
-
-                        </StackPanel>
-                    </DataTemplate>
-
-                </phone:LongListSelector.ItemTemplate>
-
-            </phone:LongListSelector>
+     
 
 
 

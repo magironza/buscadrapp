@@ -23,11 +23,37 @@
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="BuscaDr" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Final" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel. Colocar aquí el contenido adicional-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+
+            <phone:LongListSelector
+                x:Name="list"
+                ItemsSource="{Binding Data}" Canvas.Top="30">
+
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <StackPanel Margin="0,0,0,10">
+                                <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                <TextBlock Text="{Binding Direccion}" FontSize="24"/>
+                                <TextBlock Text="{Binding Telefono}" />
+                                <TextBlock Text="{Binding Tarifa}" />
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+
+
+
+            </phone:LongListSelector>
+
 
         </Grid>
     </Grid>

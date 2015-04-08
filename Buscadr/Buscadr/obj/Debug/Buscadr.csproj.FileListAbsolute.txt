@@ -46,6 +46,13 @@ C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\Bin\Debug\Sy
 C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\en-US\System.Net.Http.SR.resw
 C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http.pri
 C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\qualifiers.txt
-C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\AddMedico.g.cs
 C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\Bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\Bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\layout.resfiles
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\layout.resfiles.intermediate
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\Resources.resfiles
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\Resources.resfiles.intermediate
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\pri.resfiles
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\pri.resfiles.intermediate
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\priconfig.xml
+C:\Users\User\documents\visual studio 2013\Projects\Buscadr\Buscadr\obj\Debug\System.Net.Http\priconfig.xml.intermediate
