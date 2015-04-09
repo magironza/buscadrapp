@@ -11,6 +11,9 @@ using Buscadr.Resources;
 using Buscadr.Net;
 using Buscadr.Models;
 
+
+
+
 namespace Buscadr
 {
     public partial class Busqueda : PhoneApplicationPage, Mongo<Busca>.Imongo
@@ -19,10 +22,8 @@ namespace Buscadr
 
         public Busqueda()
         {
-
             InitializeComponent();
-          
-            mongo = new Mongo<Busca>("ppZxpAloVZB2iYVatT1rEz_6_bXUf0RJ", "listadrpop" , "drpopayan");
+            mongo = new Mongo<Busca>("ppZxpAloVZB2iYVatT1rEz_6_bXUf0RJ", "listadrpop", "drpopayan");
             mongo.findAllDocuments(this);
         }
 
@@ -35,5 +36,15 @@ namespace Buscadr
                 dataM.Data.Add(documents.ElementAt(i));
             }
         }
+
+        private void Gopage(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Final.xaml", UriKind.Relative));
+        }
+
+        
+
+
+
     }
 }

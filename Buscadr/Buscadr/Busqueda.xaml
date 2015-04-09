@@ -12,138 +12,140 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
-    
+
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRootbusqueda" Background="Transparent">
 
 
-        <!--<phone:Pivot
-            Title="Busqueda" Background="Transparent">-->
+        <Canvas>
+            <TextBox x:Name="Busque" Text="¿Que deseas Buscar?" Foreground="Gray" Width="450" Canvas.ZIndex="2"/>
+            <Rectangle Height="30" Width="30" Canvas.Left="404" 
+                           Canvas.Top="20" Canvas.ZIndex="10">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="sea.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Canvas>
+        
+
+        <Canvas>
+            
+            <!--<phone:Pivot
+            Title="Buscar" Foreground="Red" 
+                Background="Transparent" 
+                Canvas.Top="26" 
+                Canvas.ZIndex="400">
 
 
 
-            <!--<phone:PivotItem
-            Header="Medicos" >-->
+                <phone:PivotItem x:Name="medicosbuscar" Header="..." Canvas.ZIndex="200">
 
-                <StackPanel x:Name="Busca" Margin="12,17,0,28"  Height="Auto"
+                    <StackPanel x:Name="Busca" Margin="12,17,0,28"  Height="Auto"
                             DataContext="{Binding Source= {StaticResource dataModel}}"  
                             >
-            <Canvas>
-                <TextBox x:Name="buscar" Text="¿Que deseas Buscar?" Foreground="Gray" Width="450" Canvas.ZIndex="2"/>
-                <Rectangle Height="30" Width="30" Canvas.Left="404" 
-                           Canvas.Top="20" Canvas.ZIndex="10">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="sea.png"/>
-                    </Rectangle.Fill>
-                </Rectangle>
-
-            </Canvas>
-
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" Padding="5" >
-                <StackPanel>   
-                <phone:LongListSelector
-                x:Name="lista"
-                ItemsSource="{Binding Data}" Canvas.Top="30">
 
 
-                        <phone:LongListSelector.ItemTemplate>
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" Padding="5" >
+                            <StackPanel>
+                                <phone:LongListSelector
+                                             x:Name="lista"
+                                             ItemsSource="{Binding Data}" Canvas.Top="30">
 
 
-                            <DataTemplate>
+                                    <phone:LongListSelector.ItemTemplate >
 
-                                <StackPanel Margin="0,0,0,10" >
-                                    <TextBlock Text="{Binding Institucion}" FontSize="24"/>
-                                    <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
-                                    <TextBlock Text="{Binding Medico}" FontSize="24"/>
-                                    <TextBlock Text="{Binding Direccion}" FontSize="24"/>
-                                    <TextBlock Text="{Binding Telefono}" />
-                                    <TextBlock Text="{Binding Tarifa}" />
 
-                                </StackPanel>
+                                        <DataTemplate >
 
-                            </DataTemplate>
+                                            <StackPanel Margin="0,0,0,10" Tap="Gopage">
+                                                <TextBlock Text="{Binding Institucion}" FontSize="24"/>
+                                                <TextBlock Text="{Binding Especialidad}" FontSize="24"/>
+                                                <TextBlock Text="{Binding Medico}" FontSize="24"/>
+                                                
 
-                        </phone:LongListSelector.ItemTemplate>
+                                            </StackPanel>
+
+                                        </DataTemplate>
+
+                                    </phone:LongListSelector.ItemTemplate>
 
 
 
-                    </phone:LongListSelector>
-                </StackPanel>
-            </ScrollViewer>
+                                </phone:LongListSelector>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                    </StackPanel>
+
+
+                </phone:PivotItem>
+                
+                
+                
+
+                <phone:PivotItem  Header="Avanzada">
+
+
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+
+                        <StackPanel x:Name="Filtrado" Margin="10,5,10,5">
+
+
+
+                            <TextBlock Text="Precio" FontSize="50"/>
+                            <RadioButton Content="$20000"/>
+                            <RadioButton Content="$40000"/>
+                            <RadioButton Content="$80000"/>
+                            <RadioButton Content="Mas de $100000"/>
+
+                            <TextBlock Text="Especialidad" FontSize="50"/>
+                            <RadioButton Content="Medico General"/>
+                            <RadioButton Content="Especialista"/>
+                            <RadioButton Content="Dentista"/>
+                            <RadioButton Content="Otros"/>
+
+                            <TextBlock Text="Centro Asistencial" FontSize="50"/>
+                            <RadioButton Content="Valle de Pubenza"/>
+                            <RadioButton Content="Ciudad Blanca"/>
+                            <RadioButton Content="Palmares"/>
+                            <RadioButton Content="EPS"/>
+
+                            <TextBlock Text="Comentarios" FontSize="50"/>
+                            <RadioButton Content="5 estrellas"/>
+                            <RadioButton Content="4 estrellas"/>
+                            <RadioButton Content="3 estrellas"/>
+                            <RadioButton Content="Sin comentarios"/>
+
+
+
+
+
+
+
+
+
+                            <Button Click="Busqueda" Content="Buscar"/>
+
+
+
+                        </StackPanel>
+
+                    </ScrollViewer>
+
+                </phone:PivotItem>
+
+
+            </phone:Pivot>-->
+
+           
         
-        </StackPanel>
-
-
-
-
-
-
-
-
-
-            <!--</phone:PivotItem>
-
-
-
-            <phone:PivotItem
-            Header="Avanzada">
-
-
-
-                <ScrollViewer HorizontalScrollBarVisibility="Auto">
-
-                <StackPanel x:Name="Filtrado" Margin="10,5,10,5">
-
-
-
-                    <TextBlock Text="Precio" FontSize="50"/>
-                    <RadioButton Content="$20000"/>
-                    <RadioButton Content="$40000"/>
-                    <RadioButton Content="$80000"/>
-                    <RadioButton Content="Mas de $100000"/>
-
-                    <TextBlock Text="Especialidad" FontSize="50"/>
-                    <RadioButton Content="Medico General"/>
-                    <RadioButton Content="Especialista"/>
-                    <RadioButton Content="Dentista"/>
-                    <RadioButton Content="Otros"/>
-
-                    <TextBlock Text="Centro Asistencial" FontSize="50"/>
-                    <RadioButton Content="Valle de Pubenza"/>
-                    <RadioButton Content="Ciudad Blanca"/>
-                    <RadioButton Content="Palmares"/>
-                    <RadioButton Content="EPS"/>
-
-                    <TextBlock Text="Comentarios" FontSize="50"/>
-                    <RadioButton Content="5 estrellas"/>
-                    <RadioButton Content="4 estrellas"/>
-                    <RadioButton Content="3 estrellas"/>
-                    <RadioButton Content="Sin comentarios"/>
-
-
-
-
-
-
-
-
-
-                    <Button Click="Busqueda" Content="Buscar"/>
-
-
-
-                </StackPanel>
-
-                </ScrollViewer>
-
-            </phone:PivotItem>
-
-
-
-
-        </phone:Pivot>-->
-        </Grid>
+        </Canvas>
+    </Grid>
 
 </phone:PhoneApplicationPage>
+
+
 

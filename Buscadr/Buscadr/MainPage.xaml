@@ -45,7 +45,7 @@
 
 
 
-            <StackPanel x:Name="search" Tap="gotopage1" Background="Yellow" Grid.Column="0" Grid.Row="0" Margin="10,10,10,10" >
+            <StackPanel x:Name="search" Tap="gotopage1" Background="{StaticResource PhoneAccentBrush}" Grid.Column="0" Grid.Row="0" Margin="10,10,10,10" >
                 <Canvas>
                     <TextBlock Text="Busqueda" FontSize="24" FontFamily="Arial" Foreground="Black"  
                                Canvas.Left="48" Canvas.Top="230" />
@@ -65,7 +65,7 @@
 
 
             </StackPanel>
-            <StackPanel x:Name="coment"  Tap="gotopage2" Background="Yellow" Grid.Column="0" Grid.Row="1" Margin="10,10,10,10">
+            <StackPanel x:Name="coment"  Tap="gotopage2" Background="{StaticResource PhoneAccentBrush}" Grid.Column="0" Grid.Row="1" Margin="10,10,10,10">
                 <Canvas>
                     <TextBlock Text="Comentarios" FontSize="24" FontFamily="Arial" Foreground="Black"  
                                Canvas.Left="40" Canvas.Top="230" />
@@ -83,7 +83,7 @@
 
 
 
-            <StackPanel  x:Name="importa" Tap="gotopage3"  Background="Yellow" Grid.Column="1" Grid.Row="0" Margin="10,10,10,10">
+            <StackPanel  x:Name="importa" Tap="gotopage3"  Background="{StaticResource PhoneAccentBrush}" Grid.Column="1" Grid.Row="0" Margin="10,10,10,10">
                 <Canvas>
                     <TextBlock Text="Destacado" FontSize="24" FontFamily="Arial" Foreground="Black"  
                                Canvas.Left="44" Canvas.Top="230" />
@@ -103,7 +103,7 @@
 
 
 
-            <StackPanel x:Name="categories" Tap="gotopage4"  Background="Yellow" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10">
+            <StackPanel x:Name="categories" Tap="gotopage4"  Background="{StaticResource PhoneAccentBrush}" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10">
                 <Canvas>
                     <TextBlock Text="Categorias" FontSize="24" FontFamily="Arial" Foreground="Black"  
                                Canvas.Left="42" Canvas.Top="230" />

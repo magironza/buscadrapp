@@ -9,6 +9,8 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Buscadr.Net;
 using Buscadr.Models;
+using Microsoft.Phone.Maps.Controls;
+using System.Device.Location;
 
 namespace Buscadr
 {
@@ -34,6 +36,17 @@ namespace Buscadr
             {
                 dataM.Data.Add(documents.ElementAt(i));
             }
+
+
+
+            Map mapa = new Map();
+            mapa.ZoomLevel = 6;
+            Mapas.Children.Add(mapa);
+
+
         }
+
+       
     }
+    
 }

@@ -100,6 +100,8 @@
     <Compile Include="Categoria.xaml.cs">
       <DependentUpon>Categoria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Code\Archivo.cs" />
+    <Compile Include="Configuracion\Configuracion.cs" />
     <Compile Include="Filtros.xaml.cs">
       <DependentUpon>Filtros.xaml</DependentUpon>
     </Compile>
@@ -116,6 +118,9 @@
     <Compile Include="Models\Oid.cs" />
     <Compile Include="Net\Mongo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

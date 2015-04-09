@@ -22,6 +22,16 @@ namespace Buscadr
             //BuildLocalizedApplicationBar();
         }
 
+
+
+
+
+
+
+
+
+
+
        
 
         private void gotopage1(object sender, System.Windows.Input.GestureEventArgs e)
@@ -46,27 +56,22 @@ namespace Buscadr
 
 
 
-        private void BuildLocalizedApplicationBar()
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
-            // Establecer ApplicationBar de la página en una nueva instancia de ApplicationBar.
-            ApplicationBar = new ApplicationBar();
+            MessageBoxResult x = MessageBox.Show("Desea salir de la Aplicación?","", MessageBoxButton.OKCancel);
 
-            // Crear un nuevo botón y establecer el valor de texto en la cadena traducida de AppResources.
-            ApplicationBarIconButton addButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-            addButton.Text = AppResources.AppBarButtonText;
-            addButton.Click += action_Click;
+            if (x == MessageBoxResult.OK)
+            {
+                NavigationService.RemoveBackEntry();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
 
 
-            ApplicationBar.Buttons.Add(addButton);
-
-            // Crear un nuevo elemento de menú con la cadena traducida de AppResources.
-            ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-         
         }
 
-        void action_Click(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/AddMedico.xaml", UriKind.Relative));
-        }
+       
     }
 }

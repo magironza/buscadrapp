@@ -33,6 +33,11 @@ namespace Buscadr
             dataM.Data.Add(documents.ElementAt(i));
         }
     }
+
+         private void Gopage(object sender, System.Windows.Input.GestureEventArgs e)
+         {
+             NavigationService.Navigate(new Uri("/Final.xaml", UriKind.Relative));
+         }
     }
 }
 

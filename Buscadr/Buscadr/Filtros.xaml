@@ -24,7 +24,7 @@
 
         </Grid.RowDefinitions>
 
-        <StackPanel  x:Name="cabecera" Grid.Row="0" Margin="12,17,12,28" Background="Yellow">
+        <StackPanel  x:Name="cabecera" Grid.Row="0" Margin="12,17,12,28" Background="{StaticResource PhoneAccentBrush}">
             <TextBlock Text="BuscaDr" Style="{StaticResource PhoneTextNormalStyle}" Foreground="Black"/>
             <TextBlock Text="Filtros" Style="{StaticResource PhoneTextTitle1Style}" Foreground="Black"/>
 
